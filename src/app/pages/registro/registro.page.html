@@ -1,0 +1,83 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <img src="assets/logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header ></ion-header>
+  <ion-card>
+    <ion-card-header>
+    <ion-card-title>Creá una cuenta</ion-card-title>
+    </ion-card-header>
+      <p>Completa el formulario con tus datos</p>
+
+    <ion-card-content>
+      <form>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label position="stacked">Nombre de Usuario</ion-label>
+            <ion-input type="text" class="inputs_inicio"
+                    name="nombre" [(ngModel)]="usuario.nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input type="password" class="inputs_inicio"
+                    name="password" [(ngModel)]="usuario.password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Rut</ion-label>
+            <ion-input type="text" class="inputs_inicio"
+                    name="rut" [(ngModel)]="usuario.rut"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Fecha de nacimiento</ion-label>
+            <ion-input type="date" class="inputs_inicio"
+                    name="fecha_nacimiento" [(ngModel)]="usuario.fecha_nacimiento"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Correo</ion-label>
+            <ion-input type="email" class="inputs_inicio"
+                    name="email" [(ngModel)]="usuario.email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Sede</ion-label>
+            <ion-input type="text" class="inputs_inicio"
+                    name="sede" [(ngModel)]="usuario.sede"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Tipo de Usuario</ion-label>
+            <ion-input type="text" class="inputs_inicio"
+            name="tipo" [(ngModel)]="usuario.tipo"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <ion-item class="terminos" lines="none">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label>Acepto los terminos y condiciones</ion-label>
+        </ion-item>
+        <ion-button (click)="Registrar()" expand="block" fill="solid" color="success" shape="round">
+          Registrar Usuario
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="horizontal-line">
+      <ion-label>¿Ya tienes una cuenta?</ion-label>
+      <ion-label routerLink="/inicio" class="custom-text">Inicia sesión</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+
+
+

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="assets/logo.png" width="250px">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <p class="titulo">Recupera tu<br> Cuenta</p>
+  <p class="subtitulo">Ingresa el correo o nombre de <br>usuario asociado a tu cuenta</p>
+
+  <form>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label position="stacked">Correo</ion-label>
+        <ion-input type="email" class="input_recordar"
+                name="email" [(ngModel)]="usuario.email"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="recuperarContrasenha()" color="success" class="boton_enviar">
+      Enviar
+    </ion-button>
+  </form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="horizontal-line">
+      <ion-label>¿Ya tienes una cuenta?</ion-label>
+      <ion-label routerLink="/inicio" class="custom-text">Inicia sesión</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,66 @@
+ion-card-title{
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+    color: rgb(71, 71, 71);
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    text-align: center;
+    font-size: medium;
+    font-weight: 600;
+    color: rgb(172, 172, 172);
+    font-size: 14px;
+}
+
+.linea_hr{
+    width: 80vw;
+    color: rgb(95, 95, 95);
+}
+
+.horizontal-line {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+  
+.horizontal-line ion-label:first-child {
+    margin-right: 10px; 
+}
+  
+.horizontal-line ion-label:last-child {
+    color: rgb(37, 17, 151); 
+    cursor: pointer;
+    transition: color 0.3s;
+}
+  
+.horizontal-line ion-label:last-child:hover {
+    color: #2075d4; 
+}
+
+.terminos{
+    text-align: center;
+}
+
+ion-label[position="stacked"] {
+    font-weight: bold; 
+    color: #555; 
+    margin-bottom: 8px; 
+    margin-left: 8vw;
+}
+
+ion-item{
+    padding-bottom: 2px;
+}
+
+ion-input.inputs_inicio {
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    width: 80%; 
+    margin-left: 8vw;
+    --padding-end: 10px;
+    --padding-start: 10px;
+}

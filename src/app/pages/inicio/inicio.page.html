@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <img src="assets/logo.png">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+     <img src="assets/autoinicio.gif" alt="" class="gif_auto">
+  <form>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label position="stacked">Nombre de Usuario</ion-label>
+        <ion-input type="text" class="inputs_inicio"
+                name="nombre" [(ngModel)]="usuario.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" class="inputs_inicio"
+                name="password" [(ngModel)]="usuario.password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="iniciarSesion()" expand="block" fill="solid" color="success" shape="round" class="inicio">
+      Iniciar Sesion
+    </ion-button>
+  </form>
+
+  <div class="horizontal-line">
+    <ion-label>¿Olvidaste tu contraseña?</ion-label>
+    <ion-label routerLink="/recuperar" class="custom-text">Recuperar</ion-label>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="horizontal-line">
+      <ion-label>¿No tienes una cuenta?</ion-label>
+      <ion-label routerLink="/registro" class="custom-text">Regístrate</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-footer>
